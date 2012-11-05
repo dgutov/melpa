@@ -467,6 +467,7 @@ file named PACKAGE-NAME.el inside the package directory."
            (when (file-exists-p file-path)
              (with-temp-buffer
                (insert-file-contents file-path)
+               (require 'lisp-mnt)
                (lm-commentary)))))
      package-name
      raw)))
